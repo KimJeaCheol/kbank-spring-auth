@@ -1,0 +1,37 @@
+2024-05-19T21:16:02.663+09:00  INFO 29512 --- [sprignsample] [main] c.i.s.SprignsampleApplication            : Starting SprignsampleApplication using Java 17.0.1 with PID 29512 (/home/cresh0105/workspace/spring/sprignsample/build/classes/java/main started by cresh0105 in /home/cresh0105/workspace/spring/sprignsample)
+2024-05-19T21:16:02.668+09:00  INFO 29512 --- [sprignsample] [main] c.i.s.SprignsampleApplication            : No active profile set, falling back to 1 default profile: "default"
+2024-05-19T21:16:03.450+09:00  INFO 29512 --- [sprignsample] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2024-05-19T21:16:03.453+09:00  INFO 29512 --- [sprignsample] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-05-19T21:16:03.504+09:00  INFO 29512 --- [sprignsample] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+2024-05-19T21:16:03.848+09:00  WARN 29512 --- [sprignsample] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [annotationActionEndpointMapping] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-05-19T21:16:03.887+09:00  INFO 29512 --- [sprignsample] [main] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2024-05-19T21:16:04.193+09:00  INFO 29512 --- [sprignsample] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-19T21:16:04.205+09:00  INFO 29512 --- [sprignsample] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-19T21:16:04.206+09:00  INFO 29512 --- [sprignsample] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-19T21:16:04.273+09:00  INFO 29512 --- [sprignsample] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-19T21:16:04.273+09:00  INFO 29512 --- [sprignsample] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1536 ms
+2024-05-19T21:16:04.863+09:00 DEBUG 29512 --- [sprignsample] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 4 mappings in 'requestMappingHandlerMapping'
+2024-05-19T21:16:04.945+09:00 DEBUG 29512 --- [sprignsample] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-05-19T21:16:05.002+09:00 DEBUG 29512 --- [sprignsample] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-05-19T21:16:05.039+09:00 DEBUG 29512 --- [sprignsample] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-05-19T21:16:05.279+09:00  INFO 29512 --- [sprignsample] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-05-19T21:16:05.290+09:00  INFO 29512 --- [sprignsample] [main] c.i.s.SprignsampleApplication            : Started SprignsampleApplication in 3.183 seconds (process running for 3.786)
+2024-05-19T21:16:13.268+09:00  INFO 29512 --- [sprignsample] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-05-19T21:16:13.271+09:00  INFO 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-05-19T21:16:13.272+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-05-19T21:16:13.273+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-05-19T21:16:13.274+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-05-19T21:16:13.276+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2b75ab0f
+2024-05-19T21:16:13.278+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@67aee80e
+2024-05-19T21:16:13.278+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-05-19T21:16:13.279+09:00  INFO 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2024-05-19T21:16:13.309+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/transactions/generate", parameters={}
+2024-05-19T21:16:13.925+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.iron.sprignsample.TransactionController#generateTransactionId(String, HttpServletRequest)
+2024-05-19T21:16:14.070+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-05-19T21:16:14.072+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["eyJhbGciOiJIUzUxMiJ9.eyJjaSI6IjgyMDEwNTEwNjUzNDMiLCJpYXQiOjE3MTYxMjA5NzMsImV4cCI6MTcxNjEyMTE1M30.C2d (truncated)..."]
+2024-05-19T21:16:14.109+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2024-05-19T21:16:21.201+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/api/transactions/verify", parameters={}
+2024-05-19T21:16:21.205+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.iron.sprignsample.TransactionController#verifyTransactionId(HttpServletRequest)
+2024-05-19T21:16:21.250+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-05-19T21:16:21.250+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Token is valid"]
+2024-05-19T21:16:21.257+09:00 DEBUG 29512 --- [sprignsample] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
