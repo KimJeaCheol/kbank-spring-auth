@@ -25,17 +25,23 @@ public class JwtTokenProvider {
 
     private Key key;
 
+    
     @PostConstruct
     protected void init() {
         byte[] keyBytes = java.util.Base64.getDecoder().decode(jwtSecret);
         this.key = Keys.hmacShaKeyFor(keyBytes);
     }
 
-    public String generateToken(String ci) {
+    public String generateToken(String ci, TransactionInfo transactionInfo) {
         Map<String, Object> claims = new HashMap<>();
         claims.put("ci", ci);
+        claims.put("transactionId", transactionInfo.getTransactionId());
+        claims.put("securityName", transactionInfo.getSecurityName());
+        claims.put("amount", transactionInfo.getAmount());
+        claims.put("transactionType", transactionInfo.getTransactionType());
 
         Date now = new Date();
+        // Date expiryDate = Date.from(Instant.now().plus(jwtExpirationInMs, ChronoUnit.MILLIS));
         Date expiryDate = new Date(now.getTime() + jwtExpirationInMs);
 
         return Jwts.builder()
