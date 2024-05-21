@@ -4,13 +4,17 @@ import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.UnsupportedJwtException;
 import io.jsonwebtoken.security.Keys;
 import jakarta.annotation.PostConstruct;
 
@@ -34,7 +38,11 @@ public class JwtTokenProvider {
 
     public String generateToken(String ci, TransactionInfo transactionInfo) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("ci", ci);
+        claims.put("iss", "KBANK");
+        claims.put("sub", ci);
+        claims.put("aud", "di");
+        claims.put("nbf", System.currentTimeMillis() / 1000);  // Not Before (in seconds)
+        claims.put("jti", UUID.randomUUID().toString());  // JWT ID
         claims.put("transactionId", transactionInfo.getTransactionId());
         claims.put("securityName", transactionInfo.getSecurityName());
         claims.put("amount", transactionInfo.getAmount());
@@ -48,7 +56,7 @@ public class JwtTokenProvider {
                 .setClaims(claims)
                 .setIssuedAt(now)
                 .setExpiration(expiryDate)
-                .signWith(key, SignatureAlgorithm.HS512)
+                .signWith(key, SignatureAlgorithm.HS512) //서명 해싱하기 위한 알고리즘 지정
                 .compact();
     }
 
@@ -56,9 +64,12 @@ public class JwtTokenProvider {
         try {
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(authToken);
             return true;
-        } catch (Exception ex) {
+        } catch (ExpiredJwtException | MalformedJwtException | UnsupportedJwtException | IllegalArgumentException ex) {
+            // handle specific exception
             return false;
         }
+        // handle other specific exceptions
+        
     }
 
     public Claims getAllClaimsFromToken(String token) {

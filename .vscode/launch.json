@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "JwtAsymmetricKey",
+            "request": "launch",
+            "mainClass": "com.iron.sprignsample.JwtAsymmetricKey",
+            "projectName": "kbank-spring-auth"
+        },
+        {
+            "type": "java",
             "name": "KeyGenerator",
             "request": "launch",
             "mainClass": "com.iron.sprignsample.KeyGenerator",
@@ -58,6 +65,16 @@
             "presentation": {
                 "hidden": true
             }
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SprignsampleApplication<kbank-spring-auth>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.iron.sprignsample.SprignsampleApplication",
+            "projectName": "kbank-spring-auth",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ],
     "compounds": [
