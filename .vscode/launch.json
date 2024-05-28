@@ -1,0 +1,96 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "JwtAsymmetricKey",
+            "request": "launch",
+            "mainClass": "com.iron.sprignsample.JwtAsymmetricKey",
+            "projectName": "kbank-spring-auth"
+        },
+        {
+            "type": "java",
+            "name": "KeyGenerator",
+            "request": "launch",
+            "mainClass": "com.iron.sprignsample.KeyGenerator",
+            "projectName": "sprignsample"
+        },
+        {
+            "type": "java",
+            "name": "Base64Encoder",
+            "request": "launch",
+            "mainClass": "com.iron.sprignsample.Base64Encoder",
+            "projectName": "sprignsample"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SprignsampleApplication<sprignsample>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.iron.sprignsample.SprignsampleApplication",
+            "projectName": "sprignsample",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=34675 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=sprignsample"
+        },
+        {
+            "type": "pwa-msedge",
+            "name": "Launch Microsoft Edge",
+            "request": "launch",
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ],
+            "url": "c:\\Users\\cresh\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html",
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "pwa-msedge",
+            "name": "Launch Microsoft Edge in headless mode",
+            "request": "launch",
+            "runtimeArgs": [
+                "--headless",
+                "--remote-debugging-port=9222"
+            ],
+            "url": "c:\\Users\\cresh\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html",
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "vscode-edge-devtools.debug",
+            "name": "Open Edge DevTools",
+            "request": "attach",
+            "url": "c:\\Users\\cresh\\.vscode\\extensions\\ms-edgedevtools.vscode-edge-devtools-2.1.5\\out\\startpage\\index.html",
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SprignsampleApplication<kbank-spring-auth>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.iron.sprignsample.SprignsampleApplication",
+            "projectName": "kbank-spring-auth",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch Edge Headless and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge in headless mode",
+                "Open Edge DevTools"
+            ]
+        },
+        {
+            "name": "Launch Edge and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge",
+                "Open Edge DevTools"
+            ]
+        }
+    ]
+}
